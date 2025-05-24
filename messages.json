@@ -1,0 +1,62 @@
+[
+    {
+        "original": "HI",
+        "encrypted": "1iMIhWRr5daJ8AD53Da1Uw==:tMRtZbjDaArwzENdP4N39w==",
+        "password": "1"
+    },
+    {
+        "original": "hi",
+        "encrypted": "NDW7PnoDFbPrElHuV207TA==:ABpxivPtS/jbAn0PMiHGtg==",
+        "password": "1"
+    },
+    {
+        "original": "hi1",
+        "encrypted": "R4Krcigji7jazDBWiN/ELw==:y1dyBgD/+9yGfxVzQLRHpg==",
+        "password": "1"
+    },
+    {
+        "original": " ",
+        "encrypted": "Be9EU5WA+kH3VVG8dZYFAQ==:jqKSgukqZ/GMyupoQVBhLA==",
+        "password": "hx8jZ7XTJ2zwLCk"
+    },
+    {
+        "original": "fd",
+        "encrypted": "E7zN0a8ldx4CIVvtQPp+QQ==:qS8YiXBERGlxnLleNmFVBQ==",
+        "password": "hx8jZ7XTJ2zwLCk"
+    },
+    {
+        "original": "sd",
+        "encrypted": "44rKPpikCxN+hAlXbX6qrA==:xSO9NJdiaI2UIycifnoluw==",
+        "password": "1"
+    },
+    {
+        "original": "sd",
+        "encrypted": "K3PZjEUNhk9RZkxxW2BFTA==:pQWFKd+PPnl9r0DWckoxBg==",
+        "password": "a"
+    },
+    {
+        "original": "https://www.youtube.com/watch?v=KpLM0VzLOoM",
+        "encrypted": "b/u1hiAZSIImTqBmw84i4w==:Zl/V6of+l/Wmun1nJG/hf84XCk1tKRWsvsFvAAatUicbfAvOGdtDC6n3Az5wwqLD",
+        "password": "1"
+    },
+    {
+        "original": "hello",
+        "encrypted": "oOWE4Klkn145EuwwSq3pNw==:BmH3oRLGctcDQuoVcOK7vw==",
+        "password": "1"
+    },
+    {
+        "original": "hello",
+        "encrypted": "jEEK5PO+LgQUajoUq/x02Q==:mKv75QDHy6pQ7FUL7TofgQ==",
+        "password": "12"
+    },
+    {
+        "original": "BCS401\r\nPage 01 of 02\r\nModel Question Paper with effect from 2023-24 (CBCS Scheme)\r\nUSN\r\nFourth Semester B.E. Degree Examination\r\nAnalysis and Designs of Algorithms\r\nTIME: 03 Hours\r\n\r\nMax. Marks: 100\r\n Note: 01. Answer any FIVE full questions, choosing at least ONE question from each MODULE.\r\nModule -1 BL Marks\r\nQ.01 a Define algorithm. Explain asymptotic notations Big Oh, Big Omega and Big Theta\r\nnotations\r\nL2 08\r\nb Explain the general plan for analyzing the efficiency of a recursive algorithm. Suggest\r\na recursive algorithm to find factorial of number. Derive its efficiency\r\nL2 08\r\nc If t1(n) \u2208 O(g1(n)) and t2(n) \u2208 O(g2(n)), then show that t1(n) + t2(n) \u2208 O(max{g1(n),\r\ng2(n)}).\r\nL2 04\r\nOR\r\nQ.02 a With neat diagram explain different steps in designing and analyzing an algorithm L2 08\r\nb Explain the general plan for analyzing the efficiency of a non-recursive algorithm.\r\nSuggest a non-recursive algorithm to find maximum element in the list of n numbers.\r\nDerive its efficiency\r\nL2 08\r\nc With the algorithm derive the worst case efficiency for Bubble sort L2 04\r\nModule-2\r\nQ. 03 a Explain the concept of divide and conquer. Design an algorithm for merge sort and\r\nderive its time complexity\r\nL2 10\r\nb Design an insertion sort algorithm and obtain its time complexity. Apply insertion sort\r\non these elements. 25,75,40,10,20,\r\nL3 10\r\nOR\r\nQ.04 a Explain Strassen\u2019s matrix multiplication and derive its time complexity L2 10\r\nb Design an algorithm for quick sort algorithm. Apply quick sort on these elements.\r\n25,75,40,10,20,05,15\r\nL3 10\r\nModule-3\r\nQ. 05 a Define AVL Trees. Explain its four rotation types L2 10\r\nb Construct bottom up heap for the list 2,9,7,6,5,8. Obtain its time complexity L3 10\r\nOR\r\nQ. 06 a Define heap. Explain the properties of heap along with its representation. L2 10\r\nb Design Horspools algorithm for string matching. Apply Horspools algorithm to find\r\nthe pattern BARBER in the text: JIM_SAW_ME_IN_A_BARBERSHOP\r\nL3 10\r\nModule-4\r\nQ. 07 a Construct minimum cost spanning tree using Kruskals algorithm for the following\r\ngraph.\r\nL3 10\r\nb What are Huffman Trees? Construct the Huffman tree for the following data.\r\nCharacter A B C D E -\r\nProbability 0.5 0.35 0.5 0.1 0.4 0.2\r\nEncode DAD-CBE using Huffman Encoding.\r\nL3 10\r\nBCS401\r\nPage 02 of 02\r\nOR\r\nQ. 08 a Apply Dijkstra\u2019s algorithm to find single source shortest path for the given graph by\r\nconsidering S as the source vertex.\r\nL3 10\r\nb Define transitive closure of a graph. Apply Warshalls algorithm to compute transitive\r\nclosure of a directed graph\r\nL3 10\r\nModule-5\r\nQ. 09 a Explain the following with examples\r\ni) P problem\r\nii) NP Problem\r\niii) NP- Complete problem\r\niv) NP \u2013 Hard Problems\r\nL2 10\r\nb What is backtracking? Apply backtracking to solve the below instance of sum of subset\r\nproblem S={5,10,12,13,15,18} d=30\r\nL3 10\r\nOR\r\nQ. 10 a Illustrate N queen\u2019s problem using backtracking to solve 4-Queens problem L2 10\r\nb Using Branch and Bound technique solve the below instance of knapsack problem.\r\nItem Weight Value\r\n1 2 12\r\n2 1 10\r\n3 3 20\r\n4 2 5\r\nCapacity 5\r\nL3 10 ",
+        "encrypted": "3YFf2GVt0ML6OCUt50Q6Dw==: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",
+        "password": "12"
+    },
+    {
+        "original": "hi",
+        "encrypted": "t86M5N2avodiS9lxs0u3EQ==:P1DsmYUyPlAk8K4Cj0tlCQ==",
+        "password": "123"
+    }
+]

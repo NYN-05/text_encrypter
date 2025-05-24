@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Encryptify</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AES-based secure text encryption and decryption tool built with Flask.">
+    <meta name="author" content="Your Name or Organization">
+
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='icon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #34495e;
+        }
+
+        textarea,
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccd1d9;
+            font-size: 14px;
+            resize: vertical;
+        }
+
+        button {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button[name="action"][value="encrypt"] {
+            background-color: #27ae60;
+            color: #fff;
+        }
+
+        button[name="action"][value="encrypt"]:hover {
+            background-color: #219150;
+        }
+
+        button[name="action"][value="decrypt"] {
+            background-color: #2980b9;
+            color: #fff;
+        }
+
+        button[name="action"][value="decrypt"]:hover {
+            background-color: #216ba5;
+        }
+
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            line-height: 1.5;
+        }
+
+        .result h2 {
+            color: #2c3e50;
+        }
+
+        .saved {
+            margin-top: 40px;
+        }
+
+        .saved h3 {
+            margin-bottom: 10px;
+            color: #34495e;
+        }
+
+        .saved ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .saved li {
+            margin-bottom: 20px;
+            padding: 12px;
+            border-left: 4px solid #3498db;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+        }
+
+        .saved li b {
+            color: #2c3e50;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 20px;">
+            <img src="{{ url_for('static', filename='icon.png') }}" alt="App Icon" style="height: 48px;">
+            <h1 style="margin: 0; color: #2c3e50;">Encryptify</h1>
+        </div>
+
+        <h1>AES Text Encryptor & Decryptor</h1>
+        <form method="POST" id="encryptionForm">
+            <label for="message">Message or Cipher Text:</label>
+            <textarea name="message" rows="4" required>{{ message or '' }}</textarea>
+
+            <label for="password">Password:</label>
+            <input type="text" name="password" required value="{{ password or '' }}">
+
+            <div style="display: flex; gap: 10px;">
+                <button name="action" value="encrypt">🔐 Encrypt</button>
+                <button name="action" value="decrypt">🔓 Decrypt</button>
+                <button type="button" onclick="resetForm()">🔄 Reset</button>
+            </div>
+        </form>
+
+        <script>
+            function resetForm() {
+                // Clear the form inputs
+                const form = document.getElementById('encryptionForm');
+                form.reset();
+                // Explicitly clear the password field to ensure it resets
+                form.querySelector('input[name="password"]').value = '';
+                // Remove result sections
+                document.querySelectorAll('.result').forEach(el => el.remove());
+            }
+        </script>
+
+        {% if action and (encrypted or decrypted) %}
+        <div class="result">
+            {% if action == "encrypt" and encrypted %}
+            <h2>🔐 Encrypted Message</h2>
+            <p><strong>Original:</strong> {{ original or '' }}</p>
+            <p><strong>Encrypted:</strong> {{ encrypted }}</p>
+            <p><strong>Password:</strong> {{ password or '' }}</p>
+            {% elif action == "decrypt" and decrypted %}
+            <h2>🔓 Decrypted Message</h2>
+            <p><strong>Encrypted:</strong> {{ encrypted or '' }}</p>
+            <p><strong>Decrypted:</strong> {{ decrypted }}</p>
+            <p><strong>Password:</strong> {{ password or '' }}</p>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>
